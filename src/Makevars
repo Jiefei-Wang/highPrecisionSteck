@@ -1,5 +1,5 @@
-#MPFR_LIB = "path-to-your-compiled-mpfr-library"
-#GMP_LIB = "path-to-your-compiled-gmp-library"
+## MPFR_LIB = "path-to-your-compiled-mpfr-library"
+## GMP_LIB = "path-to-your-compiled-gmp-library"
 
 PKG_CPPFLAGS=-I"${MPFR_LIB}\include"
 PKG_LIBS= -L"${MPFR_LIB}\lib" -L"${GMP_LIB}\lib" -lgmp -lmpfr 
