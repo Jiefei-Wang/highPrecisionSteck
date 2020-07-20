@@ -1,3 +1,7 @@
+#' Compute Berk-Jones statistics
+#' 
+#' Compute Berk-Jones statistics
+#' 
 #' @param x data
 #' @param indexL lower side index
 #' @param indexU upper side index

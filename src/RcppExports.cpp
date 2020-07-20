@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // steck
 NumericVector steck(int prec, NumericVector h, NumericVector l);
-RcppExport SEXP _orderUnif_steck(SEXP precSEXP, SEXP hSEXP, SEXP lSEXP) {
+RcppExport SEXP _highPrecisionSteck_steck(SEXP precSEXP, SEXP hSEXP, SEXP lSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // test_pow
 double test_pow(NumericVector x, int power, int prec);
-RcppExport SEXP _orderUnif_test_pow(SEXP xSEXP, SEXP powerSEXP, SEXP precSEXP) {
+RcppExport SEXP _highPrecisionSteck_test_pow(SEXP xSEXP, SEXP powerSEXP, SEXP precSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -33,7 +33,7 @@ END_RCPP
 }
 // test_add
 double test_add(NumericVector x, int prec);
-RcppExport SEXP _orderUnif_test_add(SEXP xSEXP, SEXP precSEXP) {
+RcppExport SEXP _highPrecisionSteck_test_add(SEXP xSEXP, SEXP precSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -45,7 +45,7 @@ END_RCPP
 }
 // test_sub
 double test_sub(NumericVector x, int prec);
-RcppExport SEXP _orderUnif_test_sub(SEXP xSEXP, SEXP precSEXP) {
+RcppExport SEXP _highPrecisionSteck_test_sub(SEXP xSEXP, SEXP precSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -57,7 +57,7 @@ END_RCPP
 }
 // test_mul
 double test_mul(NumericVector x, int prec);
-RcppExport SEXP _orderUnif_test_mul(SEXP xSEXP, SEXP precSEXP) {
+RcppExport SEXP _highPrecisionSteck_test_mul(SEXP xSEXP, SEXP precSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -69,7 +69,7 @@ END_RCPP
 }
 // test_bin
 double test_bin(NumericVector x, NumericVector y);
-RcppExport SEXP _orderUnif_test_bin(SEXP xSEXP, SEXP ySEXP) {
+RcppExport SEXP _highPrecisionSteck_test_bin(SEXP xSEXP, SEXP ySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -81,7 +81,7 @@ END_RCPP
 }
 // test_mpz_add
 double test_mpz_add(NumericVector x);
-RcppExport SEXP _orderUnif_test_mpz_add(SEXP xSEXP) {
+RcppExport SEXP _highPrecisionSteck_test_mpz_add(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -92,7 +92,7 @@ END_RCPP
 }
 // rational_steck
 NumericVector rational_steck(NumericVector l, NumericVector h);
-RcppExport SEXP _orderUnif_rational_steck(SEXP lSEXP, SEXP hSEXP) {
+RcppExport SEXP _highPrecisionSteck_rational_steck(SEXP lSEXP, SEXP hSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -104,7 +104,7 @@ END_RCPP
 }
 // rational_row
 NumericVector rational_row(NumericVector l, NumericVector h);
-RcppExport SEXP _orderUnif_rational_row(SEXP lSEXP, SEXP hSEXP) {
+RcppExport SEXP _highPrecisionSteck_rational_row(SEXP lSEXP, SEXP hSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -116,7 +116,7 @@ END_RCPP
 }
 // high_steck
 NumericVector high_steck(NumericVector l, NumericVector h, int prec, NumericVector upperBound);
-RcppExport SEXP _orderUnif_high_steck(SEXP lSEXP, SEXP hSEXP, SEXP precSEXP, SEXP upperBoundSEXP) {
+RcppExport SEXP _highPrecisionSteck_high_steck(SEXP lSEXP, SEXP hSEXP, SEXP precSEXP, SEXP upperBoundSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -130,7 +130,7 @@ END_RCPP
 }
 // high_row
 NumericVector high_row(NumericVector l, NumericVector h, int prec, NumericVector upperBound);
-RcppExport SEXP _orderUnif_high_row(SEXP lSEXP, SEXP hSEXP, SEXP precSEXP, SEXP upperBoundSEXP) {
+RcppExport SEXP _highPrecisionSteck_high_row(SEXP lSEXP, SEXP hSEXP, SEXP precSEXP, SEXP upperBoundSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -144,7 +144,7 @@ END_RCPP
 }
 // set_max_binomial
 void set_max_binomial(int n);
-RcppExport SEXP _orderUnif_set_max_binomial(SEXP nSEXP) {
+RcppExport SEXP _highPrecisionSteck_set_max_binomial(SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< int >::type n(nSEXP);
@@ -154,7 +154,7 @@ END_RCPP
 }
 // get_log_prod
 std::vector<double> get_log_prod();
-RcppExport SEXP _orderUnif_get_log_prod() {
+RcppExport SEXP _highPrecisionSteck_get_log_prod() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -164,7 +164,7 @@ END_RCPP
 }
 // C_log_prod
 double C_log_prod(int n);
-RcppExport SEXP _orderUnif_C_log_prod(SEXP nSEXP) {
+RcppExport SEXP _highPrecisionSteck_C_log_prod(SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -175,7 +175,7 @@ END_RCPP
 }
 // C_log_beta
 double C_log_beta(int a, int b);
-RcppExport SEXP _orderUnif_C_log_beta(SEXP aSEXP, SEXP bSEXP) {
+RcppExport SEXP _highPrecisionSteck_C_log_beta(SEXP aSEXP, SEXP bSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -187,7 +187,7 @@ END_RCPP
 }
 // C_lchoose
 double C_lchoose(int n, int k);
-RcppExport SEXP _orderUnif_C_lchoose(SEXP nSEXP, SEXP kSEXP) {
+RcppExport SEXP _highPrecisionSteck_C_lchoose(SEXP nSEXP, SEXP kSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -199,26 +199,26 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_orderUnif_steck", (DL_FUNC) &_orderUnif_steck, 3},
-    {"_orderUnif_test_pow", (DL_FUNC) &_orderUnif_test_pow, 3},
-    {"_orderUnif_test_add", (DL_FUNC) &_orderUnif_test_add, 2},
-    {"_orderUnif_test_sub", (DL_FUNC) &_orderUnif_test_sub, 2},
-    {"_orderUnif_test_mul", (DL_FUNC) &_orderUnif_test_mul, 2},
-    {"_orderUnif_test_bin", (DL_FUNC) &_orderUnif_test_bin, 2},
-    {"_orderUnif_test_mpz_add", (DL_FUNC) &_orderUnif_test_mpz_add, 1},
-    {"_orderUnif_rational_steck", (DL_FUNC) &_orderUnif_rational_steck, 2},
-    {"_orderUnif_rational_row", (DL_FUNC) &_orderUnif_rational_row, 2},
-    {"_orderUnif_high_steck", (DL_FUNC) &_orderUnif_high_steck, 4},
-    {"_orderUnif_high_row", (DL_FUNC) &_orderUnif_high_row, 4},
-    {"_orderUnif_set_max_binomial", (DL_FUNC) &_orderUnif_set_max_binomial, 1},
-    {"_orderUnif_get_log_prod", (DL_FUNC) &_orderUnif_get_log_prod, 0},
-    {"_orderUnif_C_log_prod", (DL_FUNC) &_orderUnif_C_log_prod, 1},
-    {"_orderUnif_C_log_beta", (DL_FUNC) &_orderUnif_C_log_beta, 2},
-    {"_orderUnif_C_lchoose", (DL_FUNC) &_orderUnif_C_lchoose, 2},
+    {"_highPrecisionSteck_steck", (DL_FUNC) &_highPrecisionSteck_steck, 3},
+    {"_highPrecisionSteck_test_pow", (DL_FUNC) &_highPrecisionSteck_test_pow, 3},
+    {"_highPrecisionSteck_test_add", (DL_FUNC) &_highPrecisionSteck_test_add, 2},
+    {"_highPrecisionSteck_test_sub", (DL_FUNC) &_highPrecisionSteck_test_sub, 2},
+    {"_highPrecisionSteck_test_mul", (DL_FUNC) &_highPrecisionSteck_test_mul, 2},
+    {"_highPrecisionSteck_test_bin", (DL_FUNC) &_highPrecisionSteck_test_bin, 2},
+    {"_highPrecisionSteck_test_mpz_add", (DL_FUNC) &_highPrecisionSteck_test_mpz_add, 1},
+    {"_highPrecisionSteck_rational_steck", (DL_FUNC) &_highPrecisionSteck_rational_steck, 2},
+    {"_highPrecisionSteck_rational_row", (DL_FUNC) &_highPrecisionSteck_rational_row, 2},
+    {"_highPrecisionSteck_high_steck", (DL_FUNC) &_highPrecisionSteck_high_steck, 4},
+    {"_highPrecisionSteck_high_row", (DL_FUNC) &_highPrecisionSteck_high_row, 4},
+    {"_highPrecisionSteck_set_max_binomial", (DL_FUNC) &_highPrecisionSteck_set_max_binomial, 1},
+    {"_highPrecisionSteck_get_log_prod", (DL_FUNC) &_highPrecisionSteck_get_log_prod, 0},
+    {"_highPrecisionSteck_C_log_prod", (DL_FUNC) &_highPrecisionSteck_C_log_prod, 1},
+    {"_highPrecisionSteck_C_log_beta", (DL_FUNC) &_highPrecisionSteck_C_log_beta, 2},
+    {"_highPrecisionSteck_C_lchoose", (DL_FUNC) &_highPrecisionSteck_C_lchoose, 2},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_orderUnif(DllInfo *dll) {
+RcppExport void R_init_highPrecisionSteck(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

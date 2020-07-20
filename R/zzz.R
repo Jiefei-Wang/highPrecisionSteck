@@ -1,4 +1,4 @@
-#' @useDynLib orderUnif, .registration = TRUE
+#' @useDynLib highPrecisionSteck, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
 NULL
 

@@ -2,66 +2,66 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 steck <- function(prec, h, l) {
-    .Call(`_orderUnif_steck`, prec, h, l)
+    .Call(`_highPrecisionSteck_steck`, prec, h, l)
 }
 
 test_pow <- function(x, power, prec) {
-    .Call(`_orderUnif_test_pow`, x, power, prec)
+    .Call(`_highPrecisionSteck_test_pow`, x, power, prec)
 }
 
 test_add <- function(x, prec) {
-    .Call(`_orderUnif_test_add`, x, prec)
+    .Call(`_highPrecisionSteck_test_add`, x, prec)
 }
 
 test_sub <- function(x, prec) {
-    .Call(`_orderUnif_test_sub`, x, prec)
+    .Call(`_highPrecisionSteck_test_sub`, x, prec)
 }
 
 test_mul <- function(x, prec) {
-    .Call(`_orderUnif_test_mul`, x, prec)
+    .Call(`_highPrecisionSteck_test_mul`, x, prec)
 }
 
 test_bin <- function(x, y) {
-    .Call(`_orderUnif_test_bin`, x, y)
+    .Call(`_highPrecisionSteck_test_bin`, x, y)
 }
 
 test_mpz_add <- function(x) {
-    .Call(`_orderUnif_test_mpz_add`, x)
+    .Call(`_highPrecisionSteck_test_mpz_add`, x)
 }
 
 rational_steck <- function(l, h) {
-    .Call(`_orderUnif_rational_steck`, l, h)
+    .Call(`_highPrecisionSteck_rational_steck`, l, h)
 }
 
 rational_row <- function(l, h) {
-    .Call(`_orderUnif_rational_row`, l, h)
+    .Call(`_highPrecisionSteck_rational_row`, l, h)
 }
 
 high_steck <- function(l, h, prec, upperBound) {
-    .Call(`_orderUnif_high_steck`, l, h, prec, upperBound)
+    .Call(`_highPrecisionSteck_high_steck`, l, h, prec, upperBound)
 }
 
 high_row <- function(l, h, prec, upperBound) {
-    .Call(`_orderUnif_high_row`, l, h, prec, upperBound)
+    .Call(`_highPrecisionSteck_high_row`, l, h, prec, upperBound)
 }
 
 set_max_binomial <- function(n) {
-    invisible(.Call(`_orderUnif_set_max_binomial`, n))
+    invisible(.Call(`_highPrecisionSteck_set_max_binomial`, n))
 }
 
 get_log_prod <- function() {
-    .Call(`_orderUnif_get_log_prod`)
+    .Call(`_highPrecisionSteck_get_log_prod`)
 }
 
 C_log_prod <- function(n) {
-    .Call(`_orderUnif_C_log_prod`, n)
+    .Call(`_highPrecisionSteck_C_log_prod`, n)
 }
 
 C_log_beta <- function(a, b) {
-    .Call(`_orderUnif_C_log_beta`, a, b)
+    .Call(`_highPrecisionSteck_C_log_beta`, a, b)
 }
 
 C_lchoose <- function(n, k) {
-    .Call(`_orderUnif_C_lchoose`, n, k)
+    .Call(`_highPrecisionSteck_C_lchoose`, n, k)
 }
 
