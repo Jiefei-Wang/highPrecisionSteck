@@ -10,10 +10,10 @@ compute_upper_bound_k <- function(l,h,k){
 compute_upper_bound <- function(l,h,check_number){
     n <- length(l)
     res <- rep(1,n)
-    ## We add a small value to handle the inaccuracy of double-precision number
-    check_point <- round(seq(from = 1, to= n, length.out = check_number)) + 10^-6
+    check_point <- round(seq(from = 1, to= n, length.out = check_number))
     for(k in check_point){
-        res[k] <- compute_upper_bound_k(l,h,k)
+        ## We add a small value to handle the inaccuracy of double-precision number
+        res[k] <- compute_upper_bound_k(l,h,k) + 10^-6
     }
     res
 }
