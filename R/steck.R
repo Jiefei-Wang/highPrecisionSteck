@@ -37,7 +37,7 @@ compute_rational_row <- function(l,h){
 run_simulation <- function(N, rep=100, precision = 128, progress = FALSE){
     record <- c()
     if(progress)
-        pb = txtProgressBar(min = 0, max = rep, initial = 0) 
+        pb = txtProgressBar(min = 0, max = rep, initial = 0, style = 3) 
     for(i in 1:rep){
         x <-runif(N)
         stat<- BJStat(x)

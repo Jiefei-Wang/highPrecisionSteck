@@ -28,11 +28,13 @@ for(i in seq_along(N_list)){
     record[[i]]  <- run_simulation(n, sim_num, progress = TRUE)
 }
 ```
-For showing the result
+For showing the result, the code below compute the average precision, time for each algorithm.
 ``` r
 final <- lapply(record, function(x) colMeans(x))
 df <- data.frame(matrix(unlist(final), nrow = length(final), byrow = T))
 colnames(df) <- colnames(record[[1]])
-df
+df[c("n", "high_steck_prec", "high_row_prec", "high_steck_error", "high_row_error", 
+     "time_rational_steck", "time_rational_row", "timing_high_steck", 
+     "timing_high_row")]
 ```
 
