@@ -1,0 +1,2 @@
+void tic();
+void toc();

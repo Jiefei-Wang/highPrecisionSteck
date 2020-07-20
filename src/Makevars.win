@@ -1,0 +1,8 @@
+MPFR_LIB = ${mingw64}
+
+PKG_CPPFLAGS=-I"${MPFR_LIB}\include"
+#PKG_LIBS= "${MPFR_LIB}\lib\libmpfr.a" "${MPFR_LIB}\lib\libgmp.a"
+PKG_LIBS= -L"${MPFR_LIB}\lib" -lgmp -lmpfr 
+
+
+CXX_STD=CXX11
