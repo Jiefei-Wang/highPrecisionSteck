@@ -32,6 +32,15 @@ df[c("n", "high_steck_prec", "high_row_prec", "high_steck_error", "high_row_erro
      "time_rational_steck", "time_rational_row", "timing_high_steck", 
      "timing_high_row")]
 ```
+For showing the maximum precision, time, and error for each algorithm
+``` r
+final <- lapply(record, function(x) apply(x,2,max))
+df <- data.frame(matrix(unlist(final), nrow = length(final), byrow = T))
+colnames(df) <- colnames(record[[1]])
+df[c("n", "high_steck_prec", "high_row_prec", "high_steck_error", "high_row_error", 
+     "time_rational_steck", "time_rational_row", "timing_high_steck", 
+     "timing_high_row")]
+```
 
 # Example
 Suppose your working directory is at the repository root. Here is the code for generating the empirical CDF.
@@ -44,11 +53,12 @@ x <- seq(0,1,by=0.01)
 est_CDF <- kCDF(gene_p,xgrid = x)$Fhat
 
 plot(x,est_CDF, xlab ="", ylab = "", type="l", 
-     axes =FALSE,xlim = c(0,1),ylim=c(-0.05,1),col ="gray",lwd=2)
+     axes =FALSE,xlim = c(0,1),ylim=c(-0.05,1),lwd=2)
 axis(1,at=c(0,0.5,1),labels=c("0", "0.5", "1"), cex.axis = 1)
 axis(2,at=c(0,0.5,1),labels=c("0", "0.5", "1"), cex.axis = 1)
 axis(1,at=gene_p,labels =FALSE,tck = 0.05)
-lines(x, x, lty= "dashed",lwd=2)
+lines(x, x, lty= "dashed", lwd=2)
+lines(c(0.1,0.1),c(0,1), lty= "dashed",col="242424",lwd=2)
 ```
 
 For computing the Berk-Jone statistic and its p-value.

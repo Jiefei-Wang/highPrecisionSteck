@@ -5,91 +5,6 @@
 
 using namespace Rcpp;
 
-// steck
-NumericVector steck(int prec, NumericVector h, NumericVector l);
-RcppExport SEXP _highPrecisionSteck_steck(SEXP precSEXP, SEXP hSEXP, SEXP lSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< int >::type prec(precSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type h(hSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type l(lSEXP);
-    rcpp_result_gen = Rcpp::wrap(steck(prec, h, l));
-    return rcpp_result_gen;
-END_RCPP
-}
-// test_pow
-double test_pow(NumericVector x, int power, int prec);
-RcppExport SEXP _highPrecisionSteck_test_pow(SEXP xSEXP, SEXP powerSEXP, SEXP precSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    Rcpp::traits::input_parameter< int >::type power(powerSEXP);
-    Rcpp::traits::input_parameter< int >::type prec(precSEXP);
-    rcpp_result_gen = Rcpp::wrap(test_pow(x, power, prec));
-    return rcpp_result_gen;
-END_RCPP
-}
-// test_add
-double test_add(NumericVector x, int prec);
-RcppExport SEXP _highPrecisionSteck_test_add(SEXP xSEXP, SEXP precSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    Rcpp::traits::input_parameter< int >::type prec(precSEXP);
-    rcpp_result_gen = Rcpp::wrap(test_add(x, prec));
-    return rcpp_result_gen;
-END_RCPP
-}
-// test_sub
-double test_sub(NumericVector x, int prec);
-RcppExport SEXP _highPrecisionSteck_test_sub(SEXP xSEXP, SEXP precSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    Rcpp::traits::input_parameter< int >::type prec(precSEXP);
-    rcpp_result_gen = Rcpp::wrap(test_sub(x, prec));
-    return rcpp_result_gen;
-END_RCPP
-}
-// test_mul
-double test_mul(NumericVector x, int prec);
-RcppExport SEXP _highPrecisionSteck_test_mul(SEXP xSEXP, SEXP precSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    Rcpp::traits::input_parameter< int >::type prec(precSEXP);
-    rcpp_result_gen = Rcpp::wrap(test_mul(x, prec));
-    return rcpp_result_gen;
-END_RCPP
-}
-// test_bin
-double test_bin(NumericVector x, NumericVector y);
-RcppExport SEXP _highPrecisionSteck_test_bin(SEXP xSEXP, SEXP ySEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type y(ySEXP);
-    rcpp_result_gen = Rcpp::wrap(test_bin(x, y));
-    return rcpp_result_gen;
-END_RCPP
-}
-// test_mpz_add
-double test_mpz_add(NumericVector x);
-RcppExport SEXP _highPrecisionSteck_test_mpz_add(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(test_mpz_add(x));
-    return rcpp_result_gen;
-END_RCPP
-}
 // rational_steck
 NumericVector rational_steck(NumericVector l, NumericVector h);
 RcppExport SEXP _highPrecisionSteck_rational_steck(SEXP lSEXP, SEXP hSEXP) {
@@ -199,13 +114,6 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_highPrecisionSteck_steck", (DL_FUNC) &_highPrecisionSteck_steck, 3},
-    {"_highPrecisionSteck_test_pow", (DL_FUNC) &_highPrecisionSteck_test_pow, 3},
-    {"_highPrecisionSteck_test_add", (DL_FUNC) &_highPrecisionSteck_test_add, 2},
-    {"_highPrecisionSteck_test_sub", (DL_FUNC) &_highPrecisionSteck_test_sub, 2},
-    {"_highPrecisionSteck_test_mul", (DL_FUNC) &_highPrecisionSteck_test_mul, 2},
-    {"_highPrecisionSteck_test_bin", (DL_FUNC) &_highPrecisionSteck_test_bin, 2},
-    {"_highPrecisionSteck_test_mpz_add", (DL_FUNC) &_highPrecisionSteck_test_mpz_add, 1},
     {"_highPrecisionSteck_rational_steck", (DL_FUNC) &_highPrecisionSteck_rational_steck, 2},
     {"_highPrecisionSteck_rational_row", (DL_FUNC) &_highPrecisionSteck_rational_row, 2},
     {"_highPrecisionSteck_high_steck", (DL_FUNC) &_highPrecisionSteck_high_steck, 4},
